@@ -50,7 +50,25 @@ public class RoflanFilter : MassCheckerBase<RoflanDto, RoflanFilterDto>
 }
 ```
 
-The `MassCheckerBase` class provides a method `NeedItem` that evaluates all checkers against a given item and filter combination, returning `true` if all checkers pass. You can override this method if you need more complex methods checking logic. For this purpose, the base class provides the internal property `Checkers`.
+To use your filter, simply create an instance of your filter class (ideally through dependency injection), and call the `NeedItem` method with the item and filter objects. Here's an example of how to use the `RoflanFilter`:
+
+```csharp
+// Assuming these objects are obtained from your application's context
+var roflanDtos = new[]
+        {
+            new RoflanDto { Number = 1, Name = "Test", Date = DateTime.Now },
+            new RoflanDto { Number = 2, Name = "Test", Date = DateTime.Now },
+        };
+var roflanFilterDto = new RoflanFilterDto { Number = 1, Name = "Test", DateFrom = DateTime.Now.AddDays(-1), DateTo = DateTime.Now.AddDays(1) };
+
+// roflanFilter field from DI
+var filteredRoflans = roflanDtos.Where(x => roflanFilter.NeedItem(x, filterDto));
+
+Console.WriteLine($"{filteredRoflans.Count()} items after filter");
+```
+
+The `NeedItem` method evaluates all checkers against the given item and filter combination, returning `true` if all checkers pass.
+You can override the `NeedItem` method if you need more complex methods checking logic. For this purpose, the base class provides the internal property `Checkers`.
 
 ### Dependency Injection (DI) Setup
 
