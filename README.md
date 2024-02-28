@@ -12,12 +12,14 @@ To use MassChecker, add it to your project as a dependency. If MassChecker is ho
 
 ```bash
 Install-Package MassChecker
+Install-Package MassChecker.Analyzers
 ```
 
 Or, if you're using .NET CLI:
 
 ```bash
 dotnet add package MassChecker
+dotnet add package MassChecker.Analyzers
 ```
 
 ### Basic Usage
