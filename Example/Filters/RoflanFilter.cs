@@ -1,15 +1,16 @@
 ﻿// инициализируем через DI как синглтон
+
+using Example.Models;
+using MassChecker;
+
+namespace Example.Filters;
+
 public class RoflanFilter : MassCheckerBase<RoflanDto, RoflanFilterDto>
 {
-    public bool NeedItem(RoflanFilterDto filterDto, RoflanDto roflanDto)
-    {
-        return Checkers.All(x => x(roflanDto, filterDto));
-    }
-
     [Checker]
     private bool CheckNumber(RoflanDto roflanDto, RoflanFilterDto filterDto)
     {
-        return filterDto.Number == null || roflanDto.Number == filterDto.Number;
+        return  true;
     }
 
     [Checker]

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>MassChecker</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Maxim Vodopianov</Authors>
+        <Description>Library for simple implementation filters.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/max31000/MassChecker</RepositoryUrl>
+    </PropertyGroup>
+</Project>

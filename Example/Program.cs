@@ -1,4 +1,9 @@
-﻿class Program
+﻿using Example.Filters;
+using Example.Models;
+
+namespace Example;
+
+static class Program
 {
     public static void Main(string[] args)
     {
@@ -37,7 +42,7 @@
             },
         };
 
-        var roflansAfterFilter = roflans.Where(x => filter.NeedItem(filterDto, x));
+        var roflansAfterFilter = roflans.Where(x => filter.NeedItem(x, filterDto));
         Console.WriteLine(string.Join(", " , roflansAfterFilter.Select(x => x.Name)));
     }
 }

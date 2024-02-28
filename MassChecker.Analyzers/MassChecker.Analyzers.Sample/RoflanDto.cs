@@ -1,4 +1,8 @@
-﻿public class RoflanDto
+﻿using System;
+
+namespace MassChecker.Analyzers.Sample;
+
+public class RoflanDto
 {
     public int Number { get; set; }
     public string Name { get; set; }

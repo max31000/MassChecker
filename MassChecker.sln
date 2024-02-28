@@ -1,6 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassCheckerPrototype", "MassCheckerPrototype\MassCheckerPrototype.csproj", "{BB110D93-235D-4B65-8365-8B8B76F4DA60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example", "Example\Example.csproj", "{BB110D93-235D-4B65-8365-8B8B76F4DA60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassChecker", "MassChecker\MassChecker.csproj", "{28FE659D-26F3-420F-B44C-64559C295ECE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassChecker.Analyzers", "MassChecker.Analyzers\MassChecker.Analyzers\MassChecker.Analyzers.csproj", "{15455D3C-A3A2-403C-9FAF-D0D3BFECCE04}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +16,13 @@ Global
 		{BB110D93-235D-4B65-8365-8B8B76F4DA60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB110D93-235D-4B65-8365-8B8B76F4DA60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB110D93-235D-4B65-8365-8B8B76F4DA60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FE659D-26F3-420F-B44C-64559C295ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28FE659D-26F3-420F-B44C-64559C295ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28FE659D-26F3-420F-B44C-64559C295ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28FE659D-26F3-420F-B44C-64559C295ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15455D3C-A3A2-403C-9FAF-D0D3BFECCE04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15455D3C-A3A2-403C-9FAF-D0D3BFECCE04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15455D3C-A3A2-403C-9FAF-D0D3BFECCE04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15455D3C-A3A2-403C-9FAF-D0D3BFECCE04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

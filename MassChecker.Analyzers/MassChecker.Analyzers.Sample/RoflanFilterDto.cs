@@ -1,4 +1,8 @@
-﻿public class RoflanFilterDto
+﻿using System;
+
+namespace MassChecker.Analyzers.Sample;
+
+public class RoflanFilterDto
 {
     public int? Number { get; set; }
     public string? Name { get; set; }
