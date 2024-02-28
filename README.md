@@ -1,4 +1,3 @@
-```markdown
 # MassChecker Documentation
 
 ## Overview
