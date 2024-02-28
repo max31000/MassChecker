@@ -5,6 +5,8 @@ namespace MassChecker;
 
 public abstract class MassCheckerBase<TItem, TFilter>
 {
+    private readonly Func<TItem, TFilter, bool>[] checkers;
+
     protected MassCheckerBase()
     {
         var methods = GetType()
@@ -15,14 +17,13 @@ public abstract class MassCheckerBase<TItem, TFilter>
         checkers = checkerMethods.Select(x =>
             {
                 var parameters = x.GetParameters();
-    
-                if (parameters.Length != 2 || 
-                    parameters[0].ParameterType != typeof(TItem) || 
-                    parameters[1].ParameterType != typeof(TFilter) || 
+
+                if (parameters.Length != 2 ||
+                    parameters[0].ParameterType != typeof(TItem) ||
+                    parameters[1].ParameterType != typeof(TFilter) ||
                     x.ReturnType != typeof(bool))
-                {
-                    throw new InvalidOperationException($"The method {x.Name} has an incorrect signature. Expected a method with the signature (TItem, TFilter) -> bool.");
-                }
+                    throw new InvalidOperationException(
+                        $"The method {x.Name} has an incorrect signature. Expected a method with the signature (TItem, TFilter) -> bool.");
 
                 return x.CreateDelegate(
                     Expression.GetDelegateType(
@@ -35,10 +36,10 @@ public abstract class MassCheckerBase<TItem, TFilter>
             .ToArray();
     }
 
+    internal IEnumerable<Func<TItem, TFilter, bool>> Checkers => checkers;
+
     public virtual bool NeedItem(TItem itemDto, TFilter filterDto)
     {
         return checkers.All(predicate => predicate(itemDto, filterDto));
     }
-
-    private readonly Func<TItem, TFilter, bool>[] checkers;
 }
