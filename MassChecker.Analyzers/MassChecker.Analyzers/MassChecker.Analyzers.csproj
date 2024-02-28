@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <IsPackable>false</IsPackable>
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
 
@@ -19,7 +18,9 @@
         <Authors>Maxim Vodopianov</Authors>
         <Description>Analyzers for MassChecker library</Description>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Analyzer;Roslyn</PackageTags>
         <RepositoryUrl>https://github.com/max31000/MassChecker</RepositoryUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
