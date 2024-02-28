@@ -48,7 +48,7 @@ public class RoflanFilter : MassCheckerBase<RoflanDto, RoflanFilterDto>
 }
 ```
 
-The `MassCheckerBase` class provides a method `NeedItem` that evaluates all checkers against a given item and filter combination, returning `true` if all checkers pass.
+The `MassCheckerBase` class provides a method `NeedItem` that evaluates all checkers against a given item and filter combination, returning `true` if all checkers pass. You can override this method if you need more complex methods checking logic. For this purpose, the base class provides the internal property `Checkers`.
 
 ### Dependency Injection (DI) Setup
 
