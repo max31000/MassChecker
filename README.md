@@ -71,6 +71,3 @@ Direct instantiation of filter classes derived from `MassCheckerBase` is discour
 MassChecker offers a robust solution for implementing complex filtering logic in .NET applications. By following the guidelines provided in this document, you can integrate MassChecker into your project and benefit from its powerful features while maintaining high performance.
 
 For further details, issues, or contributions, please refer to the project repository on GitHub.
-```
-
-This README provides a comprehensive guide on using your library, from installation and basic usage to performance considerations and DI setup. Adjust the package installation commands according to your actual package name and hosting details.
